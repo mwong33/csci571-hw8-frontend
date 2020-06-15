@@ -22,6 +22,16 @@ img {
     vertical-align: top;
 }
 
+.custom-color {
+    background-color: #306AA5;
+    border: #306AA5;
+}
+
+.custom-color:hover {
+    background-color: #2A5885;
+    border: #2A5885;
+}
+
 .custom-hover:hover {
     color: black;
 }
