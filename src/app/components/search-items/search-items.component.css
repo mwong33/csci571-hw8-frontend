@@ -4,7 +4,7 @@ img {
 }
 
 .center {
-    width: 800px;
+    width: 700px;
     margin: auto;
 }
 
@@ -14,4 +14,26 @@ img {
 
 .bold {
     font-weight: bold;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+    vertical-align: top;
+}
+
+.custom-hover:hover {
+    color: black;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

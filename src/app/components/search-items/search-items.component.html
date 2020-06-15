@@ -68,7 +68,7 @@
         <div class="form-group row">
             <label class="col-sm-2 col-form-label bold">Sort Order</label>
             <div class="col-10">
-                <select name="sortBy" id="sortBy" class="form-control">
+                <select name="sortBy" id="sortBy" class="form-control custom-select">
                     <option value="BestMatch">Best Match</option>
                     <option value="CurrentPriceHighest">Price: highest first</option>
                     <option value="PricePlusShippingHighest">Price + Shipping: highest first</option>
@@ -76,9 +76,9 @@
                 </select>
             </div>
         </div>
-        <div class="row form-group row">
-            <button type="submit" class="btn btn-default float-right">Search</button>
-            <button type="reset" class="btn btn-default float-right">Clear</button>
+        <div class="form-group row">
+            <button type="submit" class="btn btn-primary"><img src="assets/img/search.svg" class="icon">Search</button>
+            <button type="reset" class="btn btn-secondary custom-hover"><img src="assets/img/clearAll.svg" class="icon">Clear</button>
         </div>        
     </form>
 </div>
