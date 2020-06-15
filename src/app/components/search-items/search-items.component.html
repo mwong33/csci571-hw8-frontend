@@ -1,13 +1,16 @@
-<div>
+<div class="center">
+    <div class="text-center pt-5">
+        <img src="assets/img/ebayHome.png">
+    </div>
     <form action="" class="form">
-        <div class="form-group row row">
-            <label for="keywords" class="col-sm-2 col-form-label">Key words<span class="red">*</span></label>
+        <div class="form-group row">
+            <label for="keywords" class="col-sm-2 col-form-label bold">Key words<span class="red">*</span></label>
             <div class="col-10">
                 <input type="text" name="keywords" id="keywords" class="form-control" placeholder="Enter keywords">
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Price range</label>
+            <label class="col-sm-2 col-form-label bold">Price range</label>
             <div class="col-5">
                 <input type="number" name="priceFrom" id="priceFrom" class="form-control" placeholder="Min Price">
             </div>
@@ -16,54 +19,54 @@
             </div>
         </div>
         <div class="form-group row">
-            <div class="col-sm-2">Condition</div>
+            <div class="col-sm-2 bold">Condition</div>
             <div class="col-sm-10">
                 <div class="form-check form-check-inline">
                     <input type="checkbox" name="conditionNew" id="conditionNew" value="true" class="form-check-input">
-                    <label for="conditionNew" class="form-check-label">New</label>
+                    <label for="conditionNew" class="form-check-label bold">New</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input type="checkbox" name="conditionUsed" id="conditionUsed" value="true" class="form-check-input">
-                    <label for="conditionUsed" class="form-check-label">Used</label>
+                    <label for="conditionUsed" class="form-check-label bold">Used</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input type="checkbox" name="conditionVeryGood" id="conditionVeryGood" value="true" class="form-check-input">
-                    <label for ="conditionVeryGood" class="form-check-label">Very Good</label>
+                    <label for ="conditionVeryGood" class="form-check-label bold">Very Good</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input type="checkbox" name="conditionGood" id="conditionGood" value="true" class="form-check-input">
-                    <label for="conditionGood" class="form-check-label">Good</label>
+                    <label for="conditionGood" class="form-check-label bold">Good</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input type="checkbox" name="conditionAcceptable" id="conditionAcceptable" value="true" class="form-check-input">
-                    <label for="conditionAcceptable" class="form-check-label">Acceptable</label>
+                    <label for="conditionAcceptable" class="form-check-label bold">Acceptable</label>
                 </div>
             </div>
         </div>
         <div class="form-group row">
-            <div class="col-sm-2">Seller</div>
+            <div class="col-sm-2 bold">Seller</div>
             <div class="col-sm-10">
                 <div class="form-check form-check-inline">
                     <input type="checkbox" name="returnAcceptped" id="returnAcceptped" value="true" class="form-check-input">
-                    <label for="returnAcceptped" class="form-check-label">Return Accepted</label>
+                    <label for="returnAcceptped" class="form-check-label bold">Return Accepted</label>
                 </div>
             </div>
         </div>
         <div class="form-group row">
-            <div class="col-sm-2">Shipping</div>
+            <div class="col-sm-2 bold">Shipping</div>
             <div class="col-sm-10">
                 <div class="form-check form-check-inline">
                     <input type="checkbox" name="freeShipping" id="freeShipping" value="true" class="form-check-input">
-                    <label for="freeShipping" class="form-check-label">Free</label>
+                    <label for="freeShipping" class="form-check-label bold">Free</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input type="checkbox" name="expeditedShipping" id="expeditedShipping" value="true" class="form-check-input">
-                    <label for="expeditedShipping" class="form-check-label">Expedited</label>
+                    <label for="expeditedShipping" class="form-check-label bold">Expedited</label>
                 </div>
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Sort Order</label>
+            <label class="col-sm-2 col-form-label bold">Sort Order</label>
             <div class="col-10">
                 <select name="sortBy" id="sortBy" class="form-control">
                     <option value="BestMatch">Best Match</option>
@@ -74,7 +77,8 @@
             </div>
         </div>
         <div class="row form-group row">
-
+            <button type="submit" class="btn btn-default float-right">Search</button>
+            <button type="reset" class="btn btn-default float-right">Clear</button>
         </div>        
     </form>
 </div>
