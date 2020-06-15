@@ -3,6 +3,5 @@
     max-width: 880px;
     margin: auto;
     background-color: #FDFBC9;
-    border-color: #FDFBC9;
-    border-radius: 0px;
+    border-style: none;
 }
