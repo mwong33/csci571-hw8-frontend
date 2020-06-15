@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchItemsComponent } from './components/search-items/search-items.component';
+import { AlertsComponent } from './components/alerts/alerts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchItemsComponent
+    SearchItemsComponent,
+    AlertsComponent
   ],
   imports: [
     BrowserModule,
