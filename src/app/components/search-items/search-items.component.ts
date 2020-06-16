@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchItemsComponent implements OnInit {
 
-  keywordAlert:boolean = false;
+  // Alert elements
+  keywordsAlert:boolean = false;
   priceAlert:boolean = false;
   keywords:string = "";
+
+  // Form elements
+  priceFrom:number;
+  priceTo:number;
 
   constructor() { }
 
@@ -18,25 +23,45 @@ export class SearchItemsComponent implements OnInit {
 
   // The search method
   search() {
-    console.log("searching...");
 
-    if (this.keywords == null) {
-      console.log("keywords empty!!!");
-      this.keywordAlert = true;
-    }
-    else if (this.keywords.length == 0) {
-      console.log("keywords 0!!!");
-      this.keywordAlert = true;
-    } else {
-      console.log("keywords good!");
-      this.keywordAlert = false;
-    }
+    // Validate the keywords field
+    this.validateKeywords();
+
+    // Validate the prices
+    this.validatePrice();
 
   }
 
   // The clear method
   clear() {
-    console.log("clearing...");
+
+    // Clear out the Alert Components
+    this.keywordsAlert = false;
+    this.priceAlert = false;
+  }
+
+  // keywords validation helper function
+  validateKeywords() {
+    if (this.keywords == null) {
+      this.keywordsAlert = true;
+    }
+    else if (this.keywords.length == 0) {
+      this.keywordsAlert = true;
+    } else {
+      this.keywordsAlert = false;
+    }
+  }
+
+  // price validation helper function
+  validatePrice() {
+    if ((this.priceFrom != null && this.priceFrom < 0) || (this.priceTo != null && this.priceTo < 0)) {
+      this.priceAlert = true;
+    } else if ((this.priceFrom != null && this.priceTo != null) && (this.priceFrom > this.priceTo)) {
+      this.priceAlert = true;
+    } else {
+      this.priceAlert = false;
+    }
+
   }
 
 }

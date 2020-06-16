@@ -14,10 +14,10 @@
         <div class="form-group row">
             <label class="col-12 col-sm-2 col-form-label bold">Price range</label>
             <div class="col-6 col-sm-5">
-                <input type="number" name="priceFrom" id="priceFrom" class="form-control" placeholder="Min Price">
+                <input [(ngModel)]="priceFrom" type="number" name="priceFrom" id="priceFrom" class="form-control" placeholder="Min Price">
             </div>
             <div class="col-6 col-sm-5">
-                <input type="number" name="priceTo" id="priceTo" class="form-control" placeholder="Max Price">
+                <input [(ngModel)]="priceTo" type="number" name="priceTo" id="priceTo" class="form-control" placeholder="Max Price">
             </div>
         </div>
         <div class="form-group row">
@@ -86,5 +86,5 @@
             </div>
         </div>        
     </form>
-    <app-alerts></app-alerts>
+    <app-alerts [keywordsAlert]="keywordsAlert" [priceAlert]="priceAlert"></app-alerts>
 </div>

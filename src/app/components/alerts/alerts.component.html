@@ -1,5 +1,8 @@
-<div *ngIf="keywordAlert" class="row justify-content-center">
-    <div class="alert alert-warning custom-alert text-center col-10 mt-1" role="alert">
-        {{ alertMessage }}
+<div class="row justify-content-center">
+    <div *ngIf="keywordsAlert" class="alert alert-warning custom-alert text-center col-10" role="alert">
+        Please enter a keyword
+    </div>
+    <div *ngIf="priceAlert" class="alert alert-warning custom-alert text-center col-10" role="alert">
+        Please use appropriate values for minPrice/maxPrice
     </div>
 </div>

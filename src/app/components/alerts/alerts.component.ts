@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-alerts',
@@ -8,9 +7,8 @@ import { Input } from '@angular/core';
 })
 export class AlertsComponent implements OnInit {
 
-  @Input() keywordAlert;
-
-  alertMessage:string = "Hello There!";
+  @Input() keywordsAlert:boolean;
+  @Input() priceAlert:boolean;
 
   constructor() { }
 
