@@ -24,23 +24,23 @@
             <div class="col-12 col-sm-2 bold">Condition</div>
             <div class="col-12 col-sm-10">
                 <div class="form-check form-check-inline">
-                    <input type="checkbox" name="conditionNew" id="conditionNew" value="true" class="form-check-input">
+                    <input [(ngModel)]="conditionNew" type="checkbox" name="conditionNew" id="conditionNew" value="true" class="form-check-input">
                     <label for="conditionNew" class="form-check-label bold">New</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input type="checkbox" name="conditionUsed" id="conditionUsed" value="true" class="form-check-input">
+                    <input [(ngModel)]="conditionUsed" type="checkbox" name="conditionUsed" id="conditionUsed" value="true" class="form-check-input">
                     <label for="conditionUsed" class="form-check-label bold">Used</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input type="checkbox" name="conditionVeryGood" id="conditionVeryGood" value="true" class="form-check-input">
+                    <input [(ngModel)]="conditionVeryGood" type="checkbox" name="conditionVeryGood" id="conditionVeryGood" value="true" class="form-check-input">
                     <label for ="conditionVeryGood" class="form-check-label bold">Very Good</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input type="checkbox" name="conditionGood" id="conditionGood" value="true" class="form-check-input">
+                    <input [(ngModel)]="conditionGood" type="checkbox" name="conditionGood" id="conditionGood" value="true" class="form-check-input">
                     <label for="conditionGood" class="form-check-label bold">Good</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input type="checkbox" name="conditionAcceptable" id="conditionAcceptable" value="true" class="form-check-input">
+                    <input [(ngModel)]="conditionAcceptable" type="checkbox" name="conditionAcceptable" id="conditionAcceptable" value="true" class="form-check-input">
                     <label for="conditionAcceptable" class="form-check-label bold">Acceptable</label>
                 </div>
             </div>
@@ -49,7 +49,7 @@
             <div class="col-12 col-sm-2 bold">Seller</div>
             <div class="col-12 col-sm-10">
                 <div class="form-check form-check-inline">
-                    <input type="checkbox" name="returnAcceptped" id="returnAcceptped" value="true" class="form-check-input">
+                    <input [(ngModel)]="returnAccepted" type="checkbox" name="returnAcceptped" id="returnAcceptped" value="true" class="form-check-input">
                     <label for="returnAcceptped" class="form-check-label bold">Return Accepted</label>
                 </div>
             </div>
@@ -58,11 +58,11 @@
             <div class="col-12 col-sm-2 bold">Shipping</div>
             <div class="col-12 col-sm-10">
                 <div class="form-check form-check-inline">
-                    <input type="checkbox" name="freeShipping" id="freeShipping" value="true" class="form-check-input">
+                    <input [(ngModel)]="freeShipping" type="checkbox" name="freeShipping" id="freeShipping" value="true" class="form-check-input">
                     <label for="freeShipping" class="form-check-label bold">Free</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input type="checkbox" name="expeditedShipping" id="expeditedShipping" value="true" class="form-check-input">
+                    <input [(ngModel)]="expeditedShipping" type="checkbox" name="expeditedShipping" id="expeditedShipping" value="true" class="form-check-input">
                     <label for="expeditedShipping" class="form-check-label bold">Expedited</label>
                 </div>
             </div>
@@ -70,7 +70,7 @@
         <div class="form-group row">
             <label class="col-12 col-sm-2 col-form-label bold">Sort Order</label>
             <div class="col-12 col-sm-10">
-                <select name="sortBy" id="sortBy" class="form-control custom-select">
+                <select [(ngModel)]="sortBy" name="sortBy" id="sortBy" class="form-control custom-select">
                     <option value="BestMatch">Best Match</option>
                     <option value="CurrentPriceHighest">Price: highest first</option>
                     <option value="PricePlusShippingHighest">Price + Shipping: highest first</option>
