@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormElements } from '../../models/FormElements'
+import { HttpClient } from '@angular/common/http'
 
 @Component({
   selector: 'app-search-items',
@@ -15,9 +16,12 @@ export class SearchItemsComponent implements OnInit {
   // Form elements
   formElements:FormElements={};
 
+  // HTTP
   send:boolean = false;
+  readonly ROOT_URL:string = "https://mjwong-csci-571-hw8.wl.r.appspot.com";
+  items:object;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
   }
@@ -38,8 +42,13 @@ export class SearchItemsComponent implements OnInit {
       this.send = false;
     }
 
-    console.log(this.formElements);
-
+    // If send is true, make the HTTP request to get items
+    if (this.send) {
+      this.getItems().subscribe(items => {
+        this.items = items;
+        console.log(this.items);
+      });
+    }
   }
 
   // The clear method
@@ -49,6 +58,22 @@ export class SearchItemsComponent implements OnInit {
     this.keywordsAlert = false;
     this.priceAlert = false;
     this.send=false;
+  }
+
+  // HTTP Request method to GET Items
+  getItems() {
+
+    let requestURL = this.ROOT_URL + `/items?keywords=${this.formElements.keywords}`;
+
+    for (let [key, value] of Object.entries(this.formElements)) {
+      if (key != "keywords" && value != null) {
+        requestURL += `&${key}=${value}`;
+      }
+    }
+
+    console.log(requestURL);
+
+    return this.http.get(requestURL);
   }
 
   // keywords validation helper function

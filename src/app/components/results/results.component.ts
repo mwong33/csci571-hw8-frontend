@@ -1,6 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
-import { FormElements } from 'src/app/models/FormElements';
 
 @Component({
   selector: 'app-results',
@@ -10,28 +8,9 @@ import { FormElements } from 'src/app/models/FormElements';
 export class ResultsComponent implements OnInit {
 
   @Input() send:boolean;
-  @Input() formElements:FormElements;
+  @Input() items:object;
 
-  readonly ROOT_URL:string = "https://mjwong-csci-571-hw8.wl.r.appspot.com";
-  items:object;
-
-  constructor(private http: HttpClient) { }
-
-  getItems() {
-
-    let requestURL = this.ROOT_URL + `/items?keywords=${this.formElements.keywords}`;
-
-    for (let [key, value] of Object.entries(this.formElements)) {
-      if (value != null) {
-        requestURL += `&${key}=${value}`;
-      }
-    }
-
-    this.items = this.http.get(requestURL);
-
-    console.log(this.items);
-
-  }
+  constructor() { }
 
   ngOnInit(): void {
 
