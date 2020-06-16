@@ -13,6 +13,7 @@ export class AlertsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

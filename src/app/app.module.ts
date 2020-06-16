@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchItemsComponent } from './components/search-items/search-items.component';
 import { AlertsComponent } from './components/alerts/alerts.component';
+import { ResultsComponent } from './components/results/results.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchItemsComponent,
-    AlertsComponent
+    AlertsComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,

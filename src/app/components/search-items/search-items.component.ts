@@ -11,9 +11,11 @@ export class SearchItemsComponent implements OnInit {
   // Alert elements
   keywordsAlert:boolean = false;
   priceAlert:boolean = false;
-
+  
   // Form elements
   formElements:FormElements={};
+
+  send:boolean = false;
 
   constructor() { }
 
@@ -29,6 +31,15 @@ export class SearchItemsComponent implements OnInit {
     // Validate the prices
     this.validatePrice();
 
+    // Verify if we can send the request
+    if (!this.keywordsAlert && !this.priceAlert) {
+      this.send = true;
+    } else {
+      this.send = false;
+    }
+
+    console.log(this.formElements);
+
   }
 
   // The clear method
@@ -37,6 +48,7 @@ export class SearchItemsComponent implements OnInit {
     // Clear out the Alert Components
     this.keywordsAlert = false;
     this.priceAlert = false;
+    this.send=false;
   }
 
   // keywords validation helper function
