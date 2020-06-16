@@ -10,9 +10,9 @@ export class SearchItemsComponent implements OnInit {
   // Alert elements
   keywordsAlert:boolean = false;
   priceAlert:boolean = false;
-  keywords:string = "";
 
   // Form elements
+  keywords:string = "";
   priceFrom:number;
   priceTo:number;
   conditionNew:boolean;
