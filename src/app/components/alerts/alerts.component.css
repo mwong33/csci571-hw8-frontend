@@ -1,6 +1,10 @@
 .custom-alert {
     color: black;
-    max-width: 880px;
     background-color: #FDFBC9;
     border-style: none;
+}
+
+.center {
+    max-width: 950px;
+    margin: auto;
 }
