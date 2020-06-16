@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormElements } from '../../models/FormElements'
 
 @Component({
   selector: 'app-search-items',
@@ -12,18 +13,7 @@ export class SearchItemsComponent implements OnInit {
   priceAlert:boolean = false;
 
   // Form elements
-  keywords:string = "";
-  priceFrom:number;
-  priceTo:number;
-  conditionNew:boolean;
-  conditionUsed:boolean;
-  conditionVeryGood:boolean;
-  conditionGood:boolean;
-  conditionAcceptable:boolean;
-  returnAccepted:boolean;
-  freeShipping:boolean;
-  expeditedShipping:boolean;
-  sortBy:string;
+  formElements:FormElements={};
 
   constructor() { }
 
@@ -51,10 +41,10 @@ export class SearchItemsComponent implements OnInit {
 
   // keywords validation helper function
   validateKeywords() {
-    if (this.keywords == null) {
+    if (this.formElements.keywords == null) {
       this.keywordsAlert = true;
     }
-    else if (this.keywords.length == 0) {
+    else if (this.formElements.keywords.length == 0) {
       this.keywordsAlert = true;
     } else {
       this.keywordsAlert = false;
@@ -63,9 +53,11 @@ export class SearchItemsComponent implements OnInit {
 
   // price validation helper function
   validatePrice() {
-    if ((this.priceFrom != null && this.priceFrom < 0) || (this.priceTo != null && this.priceTo < 0)) {
+    if ((this.formElements.priceFrom != null && this.formElements.priceFrom < 0) || 
+    (this.formElements.priceTo != null && this.formElements.priceTo < 0)) {
       this.priceAlert = true;
-    } else if ((this.priceFrom != null && this.priceTo != null) && (this.priceFrom > this.priceTo)) {
+    } else if ((this.formElements.priceFrom != null && this.formElements.priceTo != null) && 
+    (this.formElements.priceFrom > this.formElements.priceTo)) {
       this.priceAlert = true;
     } else {
       this.priceAlert = false;
