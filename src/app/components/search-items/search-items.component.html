@@ -8,7 +8,7 @@
         <div class="form-group row">
             <label for="keywords" class="col-12 col-sm-2 col-form-label bold">Key words<span class="red">*</span></label>
             <div class="col-12 col-sm-10">
-                <input type="text" name="keywords" id="keywords" class="form-control" placeholder="Enter keywords">
+                <input [(ngModel)]="keywords" type="text" name="keywords" id="keywords" class="form-control" placeholder="Enter keywords">
             </div>
         </div>
         <div class="form-group row">
@@ -86,4 +86,5 @@
             </div>
         </div>        
     </form>
+    <app-alerts></app-alerts>
 </div>
