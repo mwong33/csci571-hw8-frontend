@@ -12,4 +12,14 @@ export class SearchItemsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // The search method
+  search() {
+    console.log("searching...");
+  }
+
+  // The clear method
+  clear() {
+    console.log("clearing...");
+  }
+
 }
