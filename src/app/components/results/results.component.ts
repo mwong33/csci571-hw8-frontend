@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-results',
@@ -9,6 +9,8 @@ export class ResultsComponent implements OnInit {
 
   @Input() send:boolean;
   @Input() items:object;
+  @Input() keywords:string;
+  
   data:Array<any>;
   totalRecords:number;
   page:number=1;
@@ -16,8 +18,14 @@ export class ResultsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.prepareForPagination(this.items);
   }
+
+  ngOnChanges(changes: SimpleChanges) {
+    // only run when property "data" changed
+    if (changes['items']) {
+      this.prepareForPagination(this.items);
+    }
+}
 
   // Extract data fields for pagination
   prepareForPagination(items:object) {
