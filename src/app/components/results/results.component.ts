@@ -21,11 +21,13 @@ export class ResultsComponent implements OnInit {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    // only run when property "data" changed
-    if (changes['items']) {
-      this.prepareForPagination(this.items);
+    // only run when property "data" changed and send is true
+    if (this.send) {
+      if (changes['items']) {
+        this.prepareForPagination(this.items);
+      }
     }
-}
+  }
 
   // Extract data fields for pagination
   prepareForPagination(items:object) {

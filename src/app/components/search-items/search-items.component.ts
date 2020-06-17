@@ -49,7 +49,7 @@ export class SearchItemsComponent implements OnInit {
       this.getItems().subscribe(items => {
         this.items = items;
         
-        if (Object.keys(this.items).length == 0) {
+        if (this.items["itemCount"] == 0) {
           this.searchAlert = true;
         } else {
           this.send = true;
