@@ -8,11 +8,12 @@
         </div>
     </div>
     <div class="row">
-        <div *ngFor="let item of data | paginate: {id: 'itemsPagination', itemsPerPage: 5, currentPage: page }" class="card">
+        <div *ngFor="let item of data | paginate: {id: 'itemsPagination', itemsPerPage: 5, currentPage: page }" 
+        class="card w-100 mb-2 text-black custom-card">
             <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <h5 class="card-title"><a href="{{ item.viewItemURL }}" target="_blank">{{ item.title }}</a></h5>
+              <p class="card-text"><span class="font-weight-bold">Price: </span>${{ item.sellingPrice }}</p>
+              <p class="card-text"><span class="font-italic">{{ item.shipLocation }} </span><a href="#" class="btn btn-primary">Show Details</a></p>
             </div>
           </div>
     </div>

@@ -6,3 +6,9 @@
     padding-left: 5px;
     padding-right: 5px;
 }
+
+.custom-card {
+    background: #B9B8BA;
+    border-style: none;
+    border-radius: 0px;
+}
