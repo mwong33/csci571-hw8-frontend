@@ -1,8 +1,11 @@
-<div *ngIf="send">
-    <div>
-		<pagination-controls  id="itemsPagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+<div *ngIf="send" class="center">
+    <div class="row">
+        <p class="col">Results for {{ keywords }}</p>
+		<pagination-controls class="col" id="itemsPagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
     </div>
-    <ul>
-        <li *ngFor="let item of data | paginate: {id: 'itemsPagination', itemsPerPage: 5, currentPage: page }"> ... </li>
-    </ul>
+    <div class="row">
+        <ul>
+            <li *ngFor="let item of data | paginate: {id: 'itemsPagination', itemsPerPage: 5, currentPage: page }"> ... </li>
+        </ul>
+    </div>
 </div>
