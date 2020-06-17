@@ -10,6 +10,7 @@ export class ResultsComponent implements OnInit {
   @Input() send:boolean;
   @Input() items:object;
   @Input() keywords:string;
+  keywordsResult:string;
   
   data:Array<any>;
   totalRecords:number;
@@ -25,6 +26,7 @@ export class ResultsComponent implements OnInit {
     if (this.send) {
       if (changes['items']) {
         this.prepareForPagination(this.items);
+        this.keywordsResult = this.keywords;
       }
     }
   }

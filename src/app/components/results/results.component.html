@@ -9,13 +9,15 @@
     </div>
     <div *ngFor="let item of data | paginate: {id: 'itemsPagination', itemsPerPage: 5, currentPage: page }" 
     class="card w-100 mb-2 text-black custom-card">
-        <div class="row">
-            <img class="col-sm-4" src="{{ item.galleryURL }}" alt="Item Image">
-            <div class="card-body col-sm-8">
+        <div class="row align-items-center">
+            <div class="col-12 col-sm-2 text-center pt-2 pb-2">
+                <img class="img-fluid icon" src="{{ item.galleryURL }}" alt="Item Image">
+            </div>
+            <div class="card-body col-12 col-sm-10">
                 <h5 class="card-title"><a href="{{ item.viewItemURL }}" target="_blank">{{ item.title }}</a></h5>
                 <p class="card-text"><span class="font-weight-bold">Price: </span>${{ item.sellingPrice }}</p>
                 <p class="card-text font-italic">{{ item.shipLocation }}</p>
-                <a href="#" class="btn btn-primary">Show Details</a>
+                <a href="#" class="btn btn-light">Show Details</a>
             </div>
         </div>
     </div>
