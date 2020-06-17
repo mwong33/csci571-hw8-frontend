@@ -1,5 +1,8 @@
 <div *ngIf="send">
+    <div>
+		<pagination-controls  id="itemsPagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+    </div>
     <ul>
-        <li *ngFor="let item of data | paginate: { itemsPerPage: 5, currentPage: page }"> ... </li>
+        <li *ngFor="let item of data | paginate: {id: 'itemsPagination', itemsPerPage: 5, currentPage: page }"> ... </li>
     </ul>
 </div>
