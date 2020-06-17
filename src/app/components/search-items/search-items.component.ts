@@ -14,7 +14,9 @@ export class SearchItemsComponent implements OnInit {
   priceAlert:boolean = false;
   
   // Form elements
-  formElements:FormElements={};
+  formElements:FormElements={
+    sortBy: "BestMatch"
+  };
 
   // HTTP
   send:boolean = false;
