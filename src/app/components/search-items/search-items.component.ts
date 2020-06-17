@@ -31,6 +31,7 @@ export class SearchItemsComponent implements OnInit {
 
   // The search method
   search() {
+
     // Set alerts and send back to false
     this.keywordsAlert = false;
     this.priceAlert = false;
@@ -62,12 +63,27 @@ export class SearchItemsComponent implements OnInit {
 
   // The clear method
   clear() {
-
     // Clear out the Alert Components
     this.keywordsAlert = false;
     this.priceAlert = false;
     this.searchAlert = false;
     this.send = false;
+
+    // Set the sortBy back to BestMatch
+    this.formElements.sortBy = "BestMatch";
+    
+    // Reset everything else
+    this.formElements["keywords"] = "";
+    this.formElements["priceFrom"] = null;
+    this.formElements["priceTo"] = null;
+    this.formElements["conditionNew"] = null;
+    this.formElements["conditionUsed"] = null;
+    this.formElements["conditionVeryGood"] = null;
+    this.formElements["conditionGood"] = null;
+    this.formElements["conditionAcceptable"] = null;
+    this.formElements["returnAccepted"] = null;
+    this.formElements["freeShipping"] = null;
+    this.formElements["expeditedShipping"] = null;
   }
 
   // HTTP Request method to GET Items
