@@ -31,8 +31,11 @@ export class SearchItemsComponent implements OnInit {
 
   // The search method
   search() {
-    // Set searchAlert back to false
+    // Set alerts and send back to false
+    this.keywordsAlert = false;
+    this.priceAlert = false;
     this.searchAlert = false;
+    this.send = false;
 
     // Validate the keywords field
     this.validateKeywords();
