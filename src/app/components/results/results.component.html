@@ -1,7 +1,7 @@
 <div *ngIf="send" class="center">
     <div class="row justify-content-between">
         <h5 class="col-12 col-sm-6">
-            Results for {{ keywords }}
+            Results for {{ keywordsResult }}
         </h5>
         <div class="col-12 col-sm-6 text-center">
             <pagination-controls id="itemsPagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
