@@ -1,1 +1,5 @@
-<div *ngIf="send">{{ items }}</div>
+<div *ngIf="send">
+    <ul>
+        <li *ngFor="let item of data | paginate: { itemsPerPage: 5, currentPage: page }"> ... </li>
+    </ul>
+</div>
