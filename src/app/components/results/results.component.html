@@ -7,14 +7,16 @@
             <pagination-controls id="itemsPagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
         </div>
     </div>
-    <div class="row">
-        <div *ngFor="let item of data | paginate: {id: 'itemsPagination', itemsPerPage: 5, currentPage: page }" 
-        class="card w-100 mb-2 text-black custom-card">
-            <div class="card-body">
-              <h5 class="card-title"><a href="{{ item.viewItemURL }}" target="_blank">{{ item.title }}</a></h5>
-              <p class="card-text"><span class="font-weight-bold">Price: </span>${{ item.sellingPrice }}</p>
-              <p class="card-text"><span class="font-italic">{{ item.shipLocation }} </span><a href="#" class="btn btn-primary">Show Details</a></p>
+    <div *ngFor="let item of data | paginate: {id: 'itemsPagination', itemsPerPage: 5, currentPage: page }" 
+    class="card w-100 mb-2 text-black custom-card">
+        <div class="row">
+            <img class="col-sm-4" src="{{ item.galleryURL }}" alt="Item Image">
+            <div class="card-body col-sm-8">
+                <h5 class="card-title"><a href="{{ item.viewItemURL }}" target="_blank">{{ item.title }}</a></h5>
+                <p class="card-text"><span class="font-weight-bold">Price: </span>${{ item.sellingPrice }}</p>
+                <p class="card-text font-italic">{{ item.shipLocation }}</p>
+                <a href="#" class="btn btn-primary">Show Details</a>
             </div>
-          </div>
+        </div>
     </div>
 </div>
