@@ -92,7 +92,7 @@ export class SearchItemsComponent implements OnInit {
     let requestURL = this.ROOT_URL + `/items?keywords=${this.formElements.keywords}`;
 
     for (let [key, value] of Object.entries(this.formElements)) {
-      if (key != "keywords" && value != null) {
+      if (key != "keywords" && value && value != "false") {
         requestURL += `&${key}=${value}`;
       }
     }
