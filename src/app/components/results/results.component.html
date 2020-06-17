@@ -8,7 +8,7 @@
         </div>
     </div>
     <div *ngFor="let item of data | paginate: {id: 'itemsPagination', itemsPerPage: 5, currentPage: page }" 
-    class="card w-100 mb-2 text-black custom-card">
+    class="card mb-2 text-black custom-card">
         <div class="row align-items-center">
             <div class="col-12 col-sm-2 text-center">
                 <img src="{{ item.galleryURL }}" alt="Item Image">
