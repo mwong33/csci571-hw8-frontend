@@ -9,6 +9,7 @@ export class AlertsComponent implements OnInit {
 
   @Input() keywordsAlert:boolean;
   @Input() priceAlert:boolean;
+  @Input() searchAlert:boolean;
 
   constructor() { }
 

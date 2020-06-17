@@ -12,6 +12,7 @@ export class SearchItemsComponent implements OnInit {
   // Alert elements
   keywordsAlert:boolean = false;
   priceAlert:boolean = false;
+  searchAlert:boolean = false;
   
   // Form elements
   formElements:FormElements={
@@ -30,6 +31,8 @@ export class SearchItemsComponent implements OnInit {
 
   // The search method
   search() {
+    // Set searchAlert back to false
+    this.searchAlert = false;
 
     // Validate the keywords field
     this.validateKeywords();
@@ -39,17 +42,18 @@ export class SearchItemsComponent implements OnInit {
 
     // Verify if we can send the request
     if (!this.keywordsAlert && !this.priceAlert) {
-      this.send = true;
-    } else {
-      this.send = false;
-    }
-
-    // If send is true, make the HTTP request to get items
-    if (this.send) {
       this.getItems().subscribe(items => {
         this.items = items;
+        
+        if (Object.keys(this.items).length == 0) {
+          this.searchAlert = true;
+        } else {
+          this.send = true;
+        }
         console.log(this.items);
       });
+    } else {
+      this.send = false;
     }
   }
 
@@ -59,7 +63,8 @@ export class SearchItemsComponent implements OnInit {
     // Clear out the Alert Components
     this.keywordsAlert = false;
     this.priceAlert = false;
-    this.send=false;
+    this.searchAlert = false;
+    this.send = false;
   }
 
   // HTTP Request method to GET Items

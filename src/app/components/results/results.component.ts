@@ -13,7 +13,6 @@ export class ResultsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
   }
 
 }
