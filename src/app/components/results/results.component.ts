@@ -11,6 +11,8 @@ export class ResultsComponent implements OnInit {
   @Input() items:object;
   @Input() keywords:string;
   keywordsResult:string;
+  detailsButtonText:string="Show Details";
+  details:boolean=false;
   
   data:Array<any>;
   totalRecords:number;
@@ -40,5 +42,16 @@ export class ResultsComponent implements OnInit {
 
     this.data = items["items"];
     this.totalRecords = items["itemCount"];
+  }
+
+  // Show/Hide Details Click Method
+  showHideDetails() {
+    if (this.detailsButtonText == "Show Details") {
+      this.details = true;
+      this.detailsButtonText = "Hide Details";
+    } else {
+      this.details = false;
+      this.detailsButtonText = "Show Details";
+    }
   }
 }
