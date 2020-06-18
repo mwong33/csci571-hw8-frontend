@@ -5,7 +5,7 @@
             </div>
             <div class="card-body col-12 col-sm-10">
                 <h5 class="card-title"><a href="{{ item.viewItemURL }}" target="_blank">{{ item.title }}</a></h5>
-                <p class="card-text"><span class="font-weight-bold">Price: </span>${{ item.sellingPrice }}</p>
+                <p class="card-text mb-0"><span class="font-weight-bold">Price: </span>${{ item.sellingPrice }}</p>
                 <p class="card-text">
                     <span class="font-italic">{{ item.shipLocation }}&nbsp;</span>
                     <button (click)="showHideDetails()" class="btn btn-light">{{ detailsButtonText }}</button>
