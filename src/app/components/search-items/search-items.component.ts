@@ -54,7 +54,6 @@ export class SearchItemsComponent implements OnInit {
         } else {
           this.send = true;
         }
-        console.log(this.items);
       });
     } else {
       this.send = false;
@@ -96,8 +95,6 @@ export class SearchItemsComponent implements OnInit {
         requestURL += `&${key}=${value}`;
       }
     }
-
-    console.log(requestURL);
 
     return this.http.get(requestURL);
   }
