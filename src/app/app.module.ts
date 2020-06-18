@@ -11,13 +11,15 @@ import { SearchItemsComponent } from './components/search-items/search-items.com
 import { AlertsComponent } from './components/alerts/alerts.component';
 import { ResultsComponent } from './components/results/results.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchItemsComponent,
     AlertsComponent,
-    ResultsComponent
+    ResultsComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

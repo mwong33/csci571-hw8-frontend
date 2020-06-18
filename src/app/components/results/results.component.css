@@ -6,13 +6,3 @@
     padding-left: 10px;
     padding-right: 10px;
 }
-
-.custom-card {
-    background: #B9B8BA;
-    border-style: none;
-    border-radius: 0px;
-}
-
-.trim {
-    overflow: hidden;
-}

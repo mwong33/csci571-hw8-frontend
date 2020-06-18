@@ -45,15 +45,4 @@ export class ResultsComponent implements OnInit {
     this.data = items["items"];
     this.totalRecords = items["itemCount"];
   }
-
-  // Show/Hide Details Click Method
-  showHideDetails() {
-    if (this.detailsButtonText == "Show Details") {
-      this.hideDetails = false;
-      this.detailsButtonText = "Hide Details";
-    } else {
-      this.hideDetails = true;
-      this.detailsButtonText = "Show Details";
-    }
-  }
 }
