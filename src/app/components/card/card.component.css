@@ -15,3 +15,9 @@ img[src="assets/img/check.svg"] {
 .custom-icon {
     margin-bottom: 16px;
 }
+
+.custom-button:active, 
+.custom-button:focus {
+    border:0.1em solid #1055B3; /* here configure as your needs */
+    color:#1055B3;
+ }

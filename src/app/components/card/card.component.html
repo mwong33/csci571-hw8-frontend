@@ -8,7 +8,7 @@
                 <p class="card-text mb-0"><span class="font-weight-bold">Price: </span>${{ item.sellingPrice }}</p>
                 <p class="card-text">
                     <span class="font-italic">{{ item.shipLocation }}&nbsp;</span>
-                    <button (click)="showHideDetails()" class="btn btn-light">{{ detailsButtonText }}</button>
+                    <button (click)="showHideDetails()" class="btn btn-light custom-button">{{ detailsButtonText }}</button>
                 </p>
                 <div *ngIf="!hideDetails">
                     <mat-tab-group>
