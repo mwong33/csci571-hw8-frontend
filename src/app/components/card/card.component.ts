@@ -11,10 +11,19 @@ export class CardComponent implements OnInit {
   @Input() detailsButtonText:string;
 
   expeditedShippingIconPath:string="";
+  expeditedShippingColor:string="";
+
   oneDayShippingAvailableIconPath:string="";
+  oneDayShippingAvailableColor:string="";
+
   bestOfferEnabled:string="";
+  bestOfferEnabledColor:string="";
+
   buyItNowAvailable:string="";
+  buyItNowAvailableColor:string="";
+
   gift:string="";
+  giftColor:string="";
 
   constructor() { }
 
@@ -31,33 +40,43 @@ export class CardComponent implements OnInit {
     };
 
     if (this.item["expeditedShipping"] == "true") {
-      this.expeditedShippingIconPath = "assets/img/check.svg";
+      this.expeditedShippingIconPath = "done";
+      this.expeditedShippingColor = "green";
     } else {
-      this.expeditedShippingIconPath = "assets/img/cross.svg";
+      this.expeditedShippingIconPath = "clear";
+      this.expeditedShippingColor = "red";
     };
 
     if (this.item["oneDayShippingAvailable"] == "true") {
-      this.oneDayShippingAvailableIconPath = "assets/img/check.svg";
+      this.oneDayShippingAvailableIconPath = "done";
+      this.oneDayShippingAvailableColor = "green";
     } else {
-      this.oneDayShippingAvailableIconPath = "assets/img/cross.svg";
+      this.oneDayShippingAvailableIconPath = "clear";
+      this.oneDayShippingAvailableColor = "red";
     };
 
     if (this.item["bestOfferEnabled"] == "true") {
-      this.bestOfferEnabled = "assets/img/check.svg";
+      this.bestOfferEnabled = "done";
+      this.bestOfferEnabledColor = "green";
     } else {
-      this.bestOfferEnabled = "assets/img/cross.svg";
+      this.bestOfferEnabled = "clear";
+      this.bestOfferEnabledColor = "red";
     };
 
     if (this.item["buyItNowAvailable"] == "true") {
-      this.buyItNowAvailable = "assets/img/check.svg";
+      this.buyItNowAvailable = "done";
+      this.buyItNowAvailableColor = "green";
     } else {
-      this.buyItNowAvailable = "assets/img/cross.svg";
+      this.buyItNowAvailable = "clear";
+      this.buyItNowAvailableColor = "red";
     };
 
     if (this.item["gift"] == "true") {
-      this.gift = "assets/img/check.svg";
+      this.gift = "done";
+      this.giftColor = "green";
     } else {
-      this.gift = "assets/img/cross.svg";
+      this.gift = "clear";
+      this.giftColor = "red";
     }
 
   }

@@ -4,12 +4,12 @@
     border-radius: 0px;
 }
 
-img[src="assets/img/cross.svg"] {
-    fill: red !important;
+.red {
+    color: #B00133 !important;
 }
 
-img[src="assets/img/check.svg"] {
-    fill: green !important;
+.green {
+    color: #438B39 !important;
 }
 
 .custom-icon {

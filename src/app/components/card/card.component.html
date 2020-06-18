@@ -40,8 +40,8 @@
                                         <p>{{ item.shippingType }}</p>
                                         <p>{{ item.shippingCost }}</p>
                                         <p>{{ item.shipToLocations }}</p>
-                                        <img src="{{ expeditedShippingIconPath }}" class="d-block custom-icon">
-                                        <img src="{{ oneDayShippingAvailableIconPath }}" class="d-block custom-icon">
+                                        <span class="material-icons d-block custom-icon {{ expeditedShippingColor }}">{{ expeditedShippingIconPath }}</span>
+                                        <span class="material-icons d-block custom-icon {{ oneDayShippingAvailableColor }}">{{ oneDayShippingAvailableIconPath }}</span>
                                     </div>
                                 </div>
                             </div>
@@ -57,10 +57,10 @@
                                         <p class="font-weight-bold">WatchCount</p>
                                     </div>
                                     <div class="col-4 col-sm-9 pl-0">
-                                        <img src="{{ bestOfferEnabled }}" class="d-block custom-icon">
-                                        <img src="{{ buyItNowAvailable }}" class="d-block custom-icon">
+                                        <span class="material-icons d-block custom-icon {{ bestOfferEnabledColor }}">{{ bestOfferEnabled }}</span>
+                                        <span class="material-icons d-block custom-icon {{ buyItNowAvailableColor }}">{{ buyItNowAvailable }}</span>
                                         <p>{{ item.listingType }}</p>
-                                        <img src="{{ gift }}" class="d-block custom-icon">
+                                        <span class="material-icons d-block custom-icon {{ giftColor }}">{{ gift }}</span>
                                         <p>{{ item.watchCount }}</p>
                                     </div>
                                 </div>
