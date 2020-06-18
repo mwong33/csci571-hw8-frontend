@@ -10,7 +10,7 @@
                     <span class="font-italic">{{ item.shipLocation }}&nbsp;</span>
                     <button (click)="showHideDetails()" class="btn btn-light">{{ detailsButtonText }}</button>
                 </p>
-                <div [hidden]="hideDetails">
+                <div *ngIf="!hideDetails">
                     <mat-tab-group>
                         <mat-tab label="Basic Info">
                             <div class="overflow-hidden">
