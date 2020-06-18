@@ -19,5 +19,11 @@ img[src="assets/img/check.svg"] {
 .custom-button:active, 
 .custom-button:focus {
     border:0.1em solid #1055B3; /* here configure as your needs */
-    color:#1055B3;
  }
+
+ @media screen and (min-width: 0px) and (max-width: 768px) {
+    .custom-button:active, 
+    .custom-button:focus {
+        border:0.1em solid #C28729; /* here configure as your needs */
+    }
+}
