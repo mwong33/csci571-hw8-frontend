@@ -1,73 +1,122 @@
 <div class="card mb-2 text-black custom-card">
+    <div class="card-body">
         <div class="row align-items-center">
             <div class="col-12 col-sm-2 text-center">
                 <img class="img-fluid ml-2 mr-2 mt-2 mb-2" src="{{ item.galleryURL }}" alt="Item Image">
             </div>
-            <div class="card-body col-12 col-sm-10">
+            <div class="col-12 col-sm-10">
                 <h5 class="card-title"><a href="{{ item.viewItemURL }}" target="_blank">{{ item.title }}</a></h5>
                 <p class="card-text mb-0"><span class="font-weight-bold">Price: </span>${{ item.sellingPrice }}</p>
                 <p class="card-text">
                     <span class="font-italic">{{ item.shipLocation }}&nbsp;&nbsp;</span>
                     <button (click)="showHideDetails()" class="btn btn-light custom-button">{{ detailsButtonText }}</button>
                 </p>
-                <div *ngIf="!hideDetails">
-                    <mat-tab-group>
+            </div>            
+        </div>
+        <div *ngIf="!hideDetails" class="row">
+            <div class="col-0 col-sm-2">
+            </div>
+            <div class="col-12 col-sm-10">
+                <mat-tab-group>
+                    <div class="row w-100 h-100">
                         <mat-tab label="Basic Info">
-                            <div class="overflow-hidden">
-                                <div class="row w-100 h-100">
-                                    <div class="col-4 col-sm-2 pr-0">
-                                        <p class="font-weight-bold">Category Name</p>
-                                        <p class="font-weight-bold">Condition</p>
-                                    </div>
-                                    <div class="col-8 col-sm-10 pl-0">
-                                        <p>{{ item.category }}</p>
-                                        <p>{{ item.condition }}</p>
-                                    </div>
+                            <div class="row overflow-hidden">
+                                <div class="col-3">
+                                    <p class="font-weight-bold">Category Name</p>
+                                </div>
+                                <div class="col-9">
+                                    <p>{{ item.category }}</p>
+                                </div>
+                            </div>
+                            <div class="row overflow-hidden">
+                                <div clas="col-3">
+                                    <p class="font-weight-bold">Condition</p>
+                                </div>
+                                <div class="col-9">
+                                    <p>{{ item.condition }}</p>
                                 </div>
                             </div>
                         </mat-tab>
-                        <mat-tab label="Shipping Info"> 
-                            <div class="overflow-hidden">
-                                <div class="row w-100 h-100">
-                                    <div class="col-8 col-sm-3 pr-0">
-                                        <p class="font-weight-bold">ShippingType</p>
-                                        <p class="font-weight-bold">Shipping cost</p>
-                                        <p class="font-weight-bold">Shiptolocations</p>
-                                        <p class="font-weight-bold">ExpeditedShipping</p>
-                                        <p class="font-weight-bold">OneDayShippingAvailable</p>
-                                    </div>
-                                    <div class="col-4 col-sm-9 pl-0">
-                                        <p>{{ item.shippingType }}</p>
-                                        <p>{{ item.shippingCost }}</p>
-                                        <p>{{ item.shipToLocations }}</p>
-                                        <span class="material-icons d-block custom-icon {{ expeditedShippingColor }}">{{ expeditedShippingIconPath }}</span>
-                                        <span class="material-icons d-block custom-icon {{ oneDayShippingAvailableColor }}">{{ oneDayShippingAvailableIconPath }}</span>
-                                    </div>
-                                </div>
-                            </div>
+                        <mat-tab label="Shipping Info">
+    
                         </mat-tab>
-                        <mat-tab label="Listing Info"> 
-                            <div class="overflow-hidden">
-                                <div class="row w-100 h-100">
-                                    <div class="col-8 col-sm-3 pr-0">
-                                        <p class="font-weight-bold">BestOfferEnabled</p>
-                                        <p class="font-weight-bold">BuyItNowAvailable</p>
-                                        <p class="font-weight-bold">ListingType</p>
-                                        <p class="font-weight-bold">Gift</p>
-                                        <p class="font-weight-bold">WatchCount</p>
-                                    </div>
-                                    <div class="col-4 col-sm-9 pl-0">
-                                        <span class="material-icons d-block custom-icon {{ bestOfferEnabledColor }}">{{ bestOfferEnabled }}</span>
-                                        <span class="material-icons d-block custom-icon {{ buyItNowAvailableColor }}">{{ buyItNowAvailable }}</span>
-                                        <p>{{ item.listingType }}</p>
-                                        <span class="material-icons d-block custom-icon {{ giftColor }}">{{ gift }}</span>
-                                        <p>{{ item.watchCount }}</p>
-                                    </div>
-                                </div>
-                            </div> 
+                        <mat-tab label="Listing Info">
+    
                         </mat-tab>
-                      </mat-tab-group>
-                </div>
+                    </div>
+                </mat-tab-group>
             </div>
         </div>
     </div>
+    <!-- <div class="row align-items-center">
+        <div class="col-12 col-sm-2 text-center">
+            <img class="img-fluid ml-2 mr-2 mt-2 mb-2" src="{{ item.galleryURL }}" alt="Item Image">
+        </div>
+        <div class="card-body col-12 col-sm-10">
+            <h5 class="card-title"><a href="{{ item.viewItemURL }}" target="_blank">{{ item.title }}</a></h5>
+            <p class="card-text mb-0"><span class="font-weight-bold">Price: </span>${{ item.sellingPrice }}</p>
+            <p class="card-text">
+                <span class="font-italic">{{ item.shipLocation }}&nbsp;&nbsp;</span>
+                <button (click)="showHideDetails()" class="btn btn-light custom-button">{{ detailsButtonText }}</button>
+            </p>
+            <div *ngIf="!hideDetails">
+                <mat-tab-group>
+                    <mat-tab label="Basic Info">
+                        <div class="overflow-hidden">
+                            <div class="row w-100 h-100">
+                                <div class="col-4 col-sm-2 pr-0">
+                                    <p class="font-weight-bold">Category Name</p>
+                                    <p class="font-weight-bold">Condition</p>
+                                </div>
+                                <div class="col-8 col-sm-10 pl-0">
+                                    <p>{{ item.category }}</p>
+                                    <p>{{ item.condition }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </mat-tab>
+                    <mat-tab label="Shipping Info"> 
+                        <div class="overflow-hidden">
+                            <div class="row w-100 h-100">
+                                <div class="col-8 col-sm-3 pr-0">
+                                    <p class="font-weight-bold">ShippingType</p>
+                                    <p class="font-weight-bold">Shipping cost</p>
+                                    <p class="font-weight-bold">Shiptolocations</p>
+                                    <p class="font-weight-bold">ExpeditedShipping</p>
+                                    <p class="font-weight-bold">OneDayShippingAvailable</p>
+                                </div>
+                                <div class="col-4 col-sm-9 pl-0">
+                                    <p>{{ item.shippingType }}</p>
+                                    <p>{{ item.shippingCost }}</p>
+                                    <p>{{ item.shipToLocations }}</p>
+                                    <span class="material-icons d-block custom-icon {{ expeditedShippingColor }}">{{ expeditedShippingIconPath }}</span>
+                                    <span class="material-icons d-block custom-icon {{ oneDayShippingAvailableColor }}">{{ oneDayShippingAvailableIconPath }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </mat-tab>
+                    <mat-tab label="Listing Info"> 
+                        <div class="overflow-hidden">
+                            <div class="row w-100 h-100">
+                                <div class="col-8 col-sm-3 pr-0">
+                                    <p class="font-weight-bold">BestOfferEnabled</p>
+                                    <p class="font-weight-bold">BuyItNowAvailable</p>
+                                    <p class="font-weight-bold">ListingType</p>
+                                    <p class="font-weight-bold">Gift</p>
+                                    <p class="font-weight-bold">WatchCount</p>
+                                </div>
+                                <div class="col-4 col-sm-9 pl-0">
+                                    <span class="material-icons d-block custom-icon {{ bestOfferEnabledColor }}">{{ bestOfferEnabled }}</span>
+                                    <span class="material-icons d-block custom-icon {{ buyItNowAvailableColor }}">{{ buyItNowAvailable }}</span>
+                                    <p>{{ item.listingType }}</p>
+                                    <span class="material-icons d-block custom-icon {{ giftColor }}">{{ gift }}</span>
+                                    <p>{{ item.watchCount }}</p>
+                                </div>
+                            </div>
+                        </div> 
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+        </div>
+    </div> -->
+</div>
