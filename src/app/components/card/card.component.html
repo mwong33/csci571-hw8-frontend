@@ -1,6 +1,6 @@
 <div class="card mb-2 text-black custom-card">
     <div class="card-body">
-        <div class="row w-100 h-100 align-items-start overflow-hidden">
+        <div class="row w-100 h-100 align-items-start justify-content-center overflow-hidden">
             <div class="col-12 col-sm-2 text-center">
                 <img class="img-fluid" src="{{ item.galleryURL }}" alt="Item Image">
             </div>
@@ -21,11 +21,11 @@
                     <div class="row w-100 h-100 overflow-hidden">
                         <mat-tab label="Basic Info">
                             <div class="row w-100 h-100 overflow-hidden">
-                                <div class="col-6 col-sm-3">
+                                <div class="col-6 col-sm-3 pt-2 pr-0">
                                     <p class="font-weight-bold">Category Name</p>
                                     <p class="font-weight-bold">Condition</p>
                                 </div>
-                                <div class="col-6 col-sm-9">
+                                <div class="col-6 col-sm-9 pt-2 pl-0">
                                     <p>{{ item.category }}</p>
                                     <p>{{ item.condition }}</p>
                                 </div>
@@ -33,14 +33,14 @@
                         </mat-tab>
                         <mat-tab label="Shipping Info">
                             <div class="row w-100 h-100 overflow-hidden">
-                                <div class="col-8 col-sm-4">
+                                <div class="col-8 col-sm-4 pt-2 pr-0">
                                     <p class="font-weight-bold">ShippingType</p>
                                     <p class="font-weight-bold">Shipping cost</p>
                                     <p class="font-weight-bold">Shiptolocations</p>
                                     <p class="font-weight-bold">ExpeditedShipping</p>
                                     <p class="font-weight-bold">OneDayShippingAvailable</p>
                                 </div>
-                                <div class="col-4 col-sm-8">
+                                <div class="col-4 col-sm-8 pt-2 pl-0">
                                     <p>{{ item.shippingType }}</p>
                                     <p>{{ item.shippingCost }}</p>
                                     <p>{{ item.shipToLocations }}</p>
@@ -51,14 +51,14 @@
                         </mat-tab>
                         <mat-tab label="Listing Info">
                             <div class="row w-100 h-100 overflow-hidden">
-                                <div class="col-7 col-sm-4">
+                                <div class="col-7 col-sm-4 pt-2 pr-0">
                                     <p class="font-weight-bold">BestOfferEnabled</p>
                                     <p class="font-weight-bold">BuyItNowAvailable</p>
                                     <p class="font-weight-bold">ListingType</p>
                                     <p class="font-weight-bold">Gift</p>
                                     <p class="font-weight-bold">WatchCount</p>
                                 </div>
-                                <div class="col-5 col-sm-8">
+                                <div class="col-5 col-sm-8 pt-2 pl-0">
                                     <span class="material-icons d-block custom-icon {{ bestOfferEnabledColor }}">{{ bestOfferEnabled }}</span>
                                     <span class="material-icons d-block custom-icon {{ buyItNowAvailableColor }}">{{ buyItNowAvailable }}</span>
                                     <p>{{ item.listingType }}</p>
