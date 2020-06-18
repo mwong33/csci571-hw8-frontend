@@ -27,3 +27,10 @@
         border:0.1em solid #C28729; /* here configure as your needs */
     }
 }
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+    .custom-gutter {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
