@@ -10,6 +10,9 @@ export class CardComponent implements OnInit {
   @Input() hideDetails:boolean;
   @Input() detailsButtonText:string;
 
+  expeditedShippingIconPath:string="";
+  oneDayShippingAvailableIconPath:string="";
+
   constructor() { }
 
   ngOnInit(): void {
@@ -23,6 +26,19 @@ export class CardComponent implements OnInit {
       this.hideDetails = true;
       this.detailsButtonText = "Show Details";
     }
+
+    if (this.item["expeditedShipping"] == "true") {
+      this.expeditedShippingIconPath = "assets/img/check.svg";
+    } else {
+      this.expeditedShippingIconPath = "assets/img/cross.svg";
+    }
+
+    if (this.item["oneDayShippingAvailable"] == "true") {
+      this.oneDayShippingAvailableIconPath = "assets/img/check.svg"
+    } else {
+      this.oneDayShippingAvailableIconPath = "assets/img/cross.svg"
+    }
+
   }
 
 }

@@ -14,7 +14,7 @@
                     <mat-tab-group>
                         <mat-tab label="Basic Info">
                             <div class="overflow-hidden">
-                                <div class="row">
+                                <div class="row w-100">
                                     <div class="col-4 col-sm-2 pr-0">
                                         <p class="font-weight-bold">Category Name</p>
                                         <p class="font-weight-bold">Condition</p>
@@ -27,10 +27,29 @@
                             </div>
                         </mat-tab>
                         <mat-tab label="Shipping Info"> 
-                            Content 2 
+                            <div class="overflow-hidden">
+                                <div class="row w-100">
+                                    <div class="col-4 col-sm-3 pr-0">
+                                        <p class="font-weight-bold">ShippingType</p>
+                                        <p class="font-weight-bold">Shipping cost</p>
+                                        <p class="font-weight-bold">Shiptolocations</p>
+                                        <p class="font-weight-bold">ExpeditedShipping</p>
+                                        <p class="font-weight-bold">OneDayShippingAvailable</p>
+                                    </div>
+                                    <div class="col-8 col-sm-9 pl-0">
+                                        <p>{{ item.shippingType }}</p>
+                                        <p>{{ item.shippingCost }}</p>
+                                        <p>{{ item.shipToLocations }}</p>
+                                        <img src="{{ expeditedShippingIconPath }}" class="d-block custom-icon">
+                                        <img src="{{ oneDayShippingAvailableIconPath }}" class="d-block custom-icon">
+                                    </div>
+                                </div>
+                            </div>
                         </mat-tab>
                         <mat-tab label="Listing Info"> 
-                            Content 3 
+                            <div class="overflow-hidden">
+
+                            </div> 
                         </mat-tab>
                       </mat-tab-group>
                 </div>
