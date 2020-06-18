@@ -1,7 +1,7 @@
 runtime: python37
 handlers:
 - url: /
-  static_files: dist/index.html
-  upload: dist/index.html
+  static_files: dist/csci571-hw8-frontend/index.html
+  upload: dist/csci571-hw8-frontend/index.html
 - url: /
   static_dir: dist
