@@ -14,7 +14,7 @@
                     <mat-tab-group>
                         <mat-tab label="Basic Info">
                             <div class="overflow-hidden">
-                                <div class="row w-100">
+                                <div class="row w-100 h-100">
                                     <div class="col-4 col-sm-2 pr-0">
                                         <p class="font-weight-bold">Category Name</p>
                                         <p class="font-weight-bold">Condition</p>
@@ -28,7 +28,7 @@
                         </mat-tab>
                         <mat-tab label="Shipping Info"> 
                             <div class="overflow-hidden">
-                                <div class="row w-100">
+                                <div class="row w-100 h-100">
                                     <div class="col-4 col-sm-3 pr-0">
                                         <p class="font-weight-bold">ShippingType</p>
                                         <p class="font-weight-bold">Shipping cost</p>
@@ -48,7 +48,22 @@
                         </mat-tab>
                         <mat-tab label="Listing Info"> 
                             <div class="overflow-hidden">
-
+                                <div class="row w-100 h-100">
+                                    <div class="col-4 col-sm-3 pr-0">
+                                        <p class="font-weight-bold">BestOfferEnabled</p>
+                                        <p class="font-weight-bold">BuyItNowAvailable</p>
+                                        <p class="font-weight-bold">ListingType</p>
+                                        <p class="font-weight-bold">Gift</p>
+                                        <p class="font-weight-bold">WatchCount</p>
+                                    </div>
+                                    <div class="col-8 col-sm-9 pl-0">
+                                        <img src="{{ bestOfferEnabled }}" class="d-block custom-icon">
+                                        <img src="{{ buyItNowAvailable }}" class="d-block custom-icon">
+                                        <p>{{ item.listingType }}</p>
+                                        <img src="{{ gift }}" class="d-block custom-icon">
+                                        <p>{{ item.watchCount }}</p>
+                                    </div>
+                                </div>
                             </div> 
                         </mat-tab>
                       </mat-tab-group>

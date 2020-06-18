@@ -4,6 +4,14 @@
     border-radius: 0px;
 }
 
+img[src="assets/img/cross.svg"] {
+    fill: red !important;
+}
+
+img[src="assets/img/check.svg"] {
+    fill: green !important;
+}
+
 .custom-icon {
-    padding-bottom: 16px;
+    margin-bottom: 16px;
 }
