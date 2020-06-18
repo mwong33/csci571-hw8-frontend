@@ -7,7 +7,7 @@
                 <h5 class="card-title"><a href="{{ item.viewItemURL }}" target="_blank">{{ item.title }}</a></h5>
                 <p class="card-text mb-0"><span class="font-weight-bold">Price: </span>${{ item.sellingPrice }}</p>
                 <p class="card-text">
-                    <span class="font-italic">{{ item.shipLocation }}&nbsp;</span>
+                    <span class="font-italic">{{ item.shipLocation }}&nbsp;&nbsp;</span>
                     <button (click)="showHideDetails()" class="btn btn-light custom-button">{{ detailsButtonText }}</button>
                 </p>
                 <div *ngIf="!hideDetails">
@@ -29,14 +29,14 @@
                         <mat-tab label="Shipping Info"> 
                             <div class="overflow-hidden">
                                 <div class="row w-100 h-100">
-                                    <div class="col-6 col-sm-3 pr-0">
+                                    <div class="col-8 col-sm-3 pr-0">
                                         <p class="font-weight-bold">ShippingType</p>
                                         <p class="font-weight-bold">Shipping cost</p>
                                         <p class="font-weight-bold">Shiptolocations</p>
                                         <p class="font-weight-bold">ExpeditedShipping</p>
                                         <p class="font-weight-bold">OneDayShippingAvailable</p>
                                     </div>
-                                    <div class="col-6 col-sm-9 pl-0">
+                                    <div class="col-4 col-sm-9 pl-0">
                                         <p>{{ item.shippingType }}</p>
                                         <p>{{ item.shippingCost }}</p>
                                         <p>{{ item.shipToLocations }}</p>
@@ -49,14 +49,14 @@
                         <mat-tab label="Listing Info"> 
                             <div class="overflow-hidden">
                                 <div class="row w-100 h-100">
-                                    <div class="col-6 col-sm-3 pr-0">
+                                    <div class="col-8 col-sm-3 pr-0">
                                         <p class="font-weight-bold">BestOfferEnabled</p>
                                         <p class="font-weight-bold">BuyItNowAvailable</p>
                                         <p class="font-weight-bold">ListingType</p>
                                         <p class="font-weight-bold">Gift</p>
                                         <p class="font-weight-bold">WatchCount</p>
                                     </div>
-                                    <div class="col-6 col-sm-9 pl-0">
+                                    <div class="col-4 col-sm-9 pl-0">
                                         <img src="{{ bestOfferEnabled }}" class="d-block custom-icon">
                                         <img src="{{ buyItNowAvailable }}" class="d-block custom-icon">
                                         <p>{{ item.listingType }}</p>
