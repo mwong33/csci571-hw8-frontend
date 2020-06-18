@@ -21,7 +21,7 @@
                     <button (click)="showHideDetails()" class="btn btn-light">{{ detailsButtonText }}</button>
                 </p>
             </div>
-            <div *ngIf="details">
+            <div [hidden]="hideDetails">
                 <p>Details!</p>
             </div>
         </div>

@@ -12,7 +12,7 @@ export class ResultsComponent implements OnInit {
   @Input() keywords:string;
   keywordsResult:string;
   detailsButtonText:string="Show Details";
-  details:boolean=false;
+  hideDetails:boolean=true;
   
   data:Array<any>;
   totalRecords:number;
@@ -29,6 +29,8 @@ export class ResultsComponent implements OnInit {
       if (changes['items']) {
         this.prepareForPagination(this.items);
         this.keywordsResult = this.keywords;
+        this.detailsButtonText="Show Details";
+        this.hideDetails=true;
       }
     }
   }
@@ -47,10 +49,10 @@ export class ResultsComponent implements OnInit {
   // Show/Hide Details Click Method
   showHideDetails() {
     if (this.detailsButtonText == "Show Details") {
-      this.details = true;
+      this.hideDetails = false;
       this.detailsButtonText = "Hide Details";
     } else {
-      this.details = false;
+      this.hideDetails = true;
       this.detailsButtonText = "Show Details";
     }
   }
