@@ -13,14 +13,16 @@
                 <div [hidden]="hideDetails">
                     <mat-tab-group>
                         <mat-tab label="Basic Info">
-                            <div class="row overflow-hidden">
-                                <div class="col-4 col-sm-2 pr-0">
-                                    <p class="font-weight-bold">Category Name</p>
-                                    <p class="font-weight-bold">Condition</p>
-                                </div>
-                                <div class="col-8 col-sm-10 pl-0">
-                                    <p>{{ item.category }}</p>
-                                    <p>{{ item.condition }}</p>
+                            <div class="overflow-hidden">
+                                <div class="row">
+                                    <div class="col-4 col-sm-2 pr-0">
+                                        <p class="font-weight-bold">Category Name</p>
+                                        <p class="font-weight-bold">Condition</p>
+                                    </div>
+                                    <div class="col-8 col-sm-10 pl-0">
+                                        <p>{{ item.category }}</p>
+                                        <p>{{ item.condition }}</p>
+                                    </div>
                                 </div>
                             </div>
                         </mat-tab>
